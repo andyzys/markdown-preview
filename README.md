@@ -3,7 +3,7 @@
 
 > This is markdown previewer based on react and marked. 
 
-![]()
+![](https://raw.githubusercontent.com/andyzys/markdown-preview/master/test/marked.gif)
 
 ## Install
 
