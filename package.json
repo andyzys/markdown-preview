@@ -4,7 +4,8 @@
   "description": "based on react and marked",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && webpack-dev-server --port 12345 --inline"
+    "start": "webpack && webpack-dev-server --port 12345 --inline",
+    "build": "webpack --config webpack.prod.config.js"
   },
   "author": "andy zou",
   "license": "MIT",
