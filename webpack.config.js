@@ -26,10 +26,6 @@ module.exports = {
           exclude: /node_modules/,
           use: ['style-loader', 'css-loader']
       }, {
-          test: /\.scss$/,
-          exclude: /node_modules/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
-      }, {
           test: /\.less$/,
           exclude: /node_modules/,
           use: ['style-loader', 'css-loader', 'less-loader']
@@ -47,7 +43,19 @@ module.exports = {
   devtool: 'inline-source-map',
   // config devserver
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    // proxy: {
+      // '*': {
+      //   target: 'localhost:12345',
+      //   changeOrigin: true,
+      //   host:'https://www.andyzou.cn'
+      // }
+      // '/post': {
+      //   target: 'https://www.andyzou.cn',
+      //   pathRewrite: {'^/post' : '/post'},
+      //   changeOrigin: true
+      // }
+    // }
   },
   plugins: [
     //清除bundle文件夹
