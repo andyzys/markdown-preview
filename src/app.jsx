@@ -8,7 +8,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLogin: true // false显示登录界面 true显示内页
+      isLogin: false // false显示登录界面 true显示内页
     }
   }
   render() {

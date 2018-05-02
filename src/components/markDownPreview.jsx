@@ -71,17 +71,17 @@ export default class MarkDownPreview extends React.Component {
           />
           <select onChange={this.kindChange.bind(this)}>
             <option value="-">选择种类</option>
-            <option value ="0">狗</option>
-            <option value ="1">猫</option>
+          <option value ="1">狗</option>
+        <option value ="2">猫</option>
           </select>
           <select onChange={this.topicChange.bind(this)}>
             <option value="-">选择专题</option>
-            <option value ="0">饮食健康</option>
-            <option value ="1">医疗知识</option>
-            <option value="2">保养护理</option>
-            <option value="3">新手知识</option>
-            <option value="4">生活用品</option>
-            <option value="5">行为训导</option>
+          <option value ="1">饮食健康</option>
+        <option value ="2">医疗知识</option>
+      <option value="3">保养护理</option>
+    <option value="4">新手知识</option>
+  <option value="5">生活用品</option>
+<option value="6">行为训导</option>
           </select>
 
         </div>
@@ -136,8 +136,8 @@ export default class MarkDownPreview extends React.Component {
     fetch('https://www.andyzou.cn/post', {
       method: 'POST',
       headers: {
-          "Content-Type": "application/json;",
-          // "accesstoken": 'adaasdasddasdasd12321'
+        "Content-Type": "application/json",
+        "accessToken": '123456'
       },
       body: JSON.stringify({
         "authorId": 123456,
@@ -150,11 +150,14 @@ export default class MarkDownPreview extends React.Component {
     })
     .then((res) => {
       console.log(res)
-      return res.json()
+      if(res.code == 200) {
+        alert('发布成功！')
+      }
+      // return res.json()
     })
-    .then((data => {
-      console.log(data)
-    }))
+    // .then((data => {
+    //   console.log(data)
+    // }))
   }
   // 输入框滚动触发联动
   handleScroll() {
